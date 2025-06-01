@@ -1,0 +1,7 @@
+alert ip $flagged_ips any -> any any (msg:"SNIDS Alert: Potential Attack Detected"; sid:100001; rev:1;)
+alert ip any any -> any any (msg:"SNIDS Alert: Potential Attack Detected!!!"; dataset:isset,blacklist; sid:100001; rev:1;)
+alert ip any any -> any any (msg:"BLOCKED - IP in Blacklist Detected"; dataset:isset,blacklist; sid:1000003; rev:1;)
+alert ip any any -> any any (msg:"BLOCKED IP Detected"; ip.src; dataset:isset,blacklist; sid:1000001; rev:1;)
+alert ip any any -> any any (msg:"BLOCKED IP Detected"; ip.src; dataset:isset,blacklist, load /home/etc/suricata/rules/blacklist.list, type string; sid:1000001; rev:1;)
+alert ip any any -> any any (msg:"BLOCKED IP Detected"; ip.src; dataset:isset,blacklist, type ip; sid:1000001; rev:1;)
+alert ip any any -> any any (msg:"SNIDS Alert"; ip.src; dataset:isset,blacklist,type ip; classtype:ddos; sid:1000001; rev:1;)
