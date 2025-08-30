@@ -65,9 +65,9 @@ The system was validated with real attack simulations:
 ---
 
 ## 👨‍💻 Authors
-- Đặng Đức Tài 
+- Đặng Đức Tài (Leader)
 - Trần Văn Chiến  
 - Nguyễn Đặng Quỳnh Như  
 - Lê Minh Quân  
 
-**Information Security Laboratory, University of Information Technology – VNU HCMC**
+**Information Security, University of Information Technology – VNU-HCM**
