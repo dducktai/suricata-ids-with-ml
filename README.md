@@ -30,6 +30,8 @@ The system simulates a local network consisting of three layers:
 
 **Suricata** is deployed between the attacker and the internal network to capture traffic. Flow features are exported to ML models, which classify them as benign or malicious. If malicious, the attacker IP is added to a blacklist, and Suricata blocks future traffic from it.
 
+![Alt text](images/architecture.png)
+
 ---
 
 ## 📊 Machine Learning
@@ -42,9 +44,7 @@ The system simulates a local network consisting of three layers:
 - **Evaluation Metrics**: Macro F1, Weighted F1, PR-AUC, Confusion Matrix, F1 per class.  
 
 ### Results
-- **XGBoost** achieved the best results with **F1-score ≈ 0.92**.  
-- **Random Forest** followed with F1 ≈ 0.88.  
-- **Decision Tree** had lower performance due to overfitting (F1 ≈ 0.80).  
+![Alt text](images/comparison.png) 
 
 ---
 
@@ -57,19 +57,6 @@ The system was validated with real attack simulations:
 
 ---
 
-## 📂 Repository Structure
-suricata-ids-with-ml/
-│── data/ # CIC-IDS2017 dataset (preprocessed)
-│── models/ # Trained ML models (DecisionTree, RF, XGBoost)
-│── suricata/ # Suricata config & custom rules
-│── scripts/ # Data preprocessing & ML training scripts
-│── notebooks/ # Jupyter/Colab notebooks for experiments
-│── README.md # Project documentation
-
-
-
----
-
 ## 🔮 Future Work
 - Integrate **provenance graph analysis** to detect **Advanced Persistent Threats (APTs)**.  
 - Implement **self-learning IDS** with online or reinforcement learning.  
@@ -78,9 +65,9 @@ suricata-ids-with-ml/
 ---
 
 ## 👨‍💻 Authors
+- Đặng Đức Tài 
 - Trần Văn Chiến  
 - Nguyễn Đặng Quỳnh Như  
 - Lê Minh Quân  
-- Đặng Đức Tài  
 
 **Information Security Laboratory, University of Information Technology – VNU HCMC**
