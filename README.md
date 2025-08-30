@@ -30,7 +30,7 @@ The system simulates a local network consisting of three layers:
 
 **Suricata** is deployed between the attacker and the internal network to capture traffic. Flow features are exported to ML models, which classify them as benign or malicious. If malicious, the attacker IP is added to a blacklist, and Suricata blocks future traffic from it.
 
-![Alt text](images/architecture.png)
+![Alt text](images/architecture.ipg)
 
 ---
 
